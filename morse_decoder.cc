@@ -49,7 +49,7 @@ void MorseDecoder::transitionFunction(char next) {
 	}
 }
 
-void MorseDecoder::encodeString() {
+std::string MorseDecoder::decodeString() {
 	int size = static_cast<int>(this->targetString.size());
 	for (int index = 0; index < size; index++) {
 		// return the next char
@@ -58,5 +58,5 @@ void MorseDecoder::encodeString() {
 		transitionFunction(next);
 	}
 	this->charBuffer += interpretMorseChar();
-	std::cout << "String: " << this->charBuffer << std::endl; 
+	return this->charBuffer;
 }

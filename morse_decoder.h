@@ -11,6 +11,6 @@ class MorseDecoder {
 		char getCharAt(int index);
 		char interpretMorseChar();
 		void transitionFunction(char next);
-		void encodeString();
+		std::string decodeString();
 };
 #endif
